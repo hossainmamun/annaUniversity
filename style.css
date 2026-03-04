@@ -1,0 +1,254 @@
+/* ==============================
+  ANNA CGPA Calculator Specific Styles Start
+  ============================== */
+  :root {
+    --anna-calc-accent: #4361ee;
+    --anna-calc-accent-deep: #3a56d4;
+    --anna-calc-accent-light: #e6f0ff;
+    --anna-calc-text: #2b2d42;
+    --anna-calc-bg: #f8f9fa;
+    --anna-calc-white: #ffffff;
+    --anna-calc-border: #e0e3e7;
+    --anna-calc-danger: #e74c3c;
+    --anna-calc-success: #2ecc71;
+    --anna-calc-radius: 3px;
+    --anna-calc-spacing: 1.5rem;
+    --anna-calc-gap: 0.65rem;
+  }
+  *{
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+  }
+  /*==============================
+     Regulation row
+    ============================== */
+  .anna-calc-regulation-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--anna-calc-gap);
+    margin-bottom: var(--anna-calc-spacing);
+  }
+  .anna-calc-label {
+    font-weight: 600;
+  }
+  
+  /*==============================
+    Semesters container
+    ============================== */
+  .anna-calc-semester {
+    margin-bottom: var(--anna-calc-spacing);
+    padding: var(--anna-calc-gap);
+    border: 1px solid var(--anna-calc-border);
+    border-radius: var(--anna-calc-radius);
+    background-color: var(--anna-calc-accent-light);
+  }
+  .anna-calc-semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--anna-calc-gap);
+    border-bottom: 1px dashed var(--anna-calc-accent) !important;
+    padding-bottom: 0.5rem;
+  }
+  .anna-calc-semester-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--anna-calc-accent-deep) !important;
+  }
+
+  .anna-calc-remove-semester-btn{
+    border: 2px solid var(--anna-calc-danger) !important;
+    border-radius: 50% !important;
+    background-color: var(--anna-calc-white);
+    color: var(--anna-calc-danger) !important;
+    font-size: 1.2rem !important;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .anna-calc-remove-semester-btn:hover{
+    transform: translateY(-2px);
+  }
+  
+  /*==============================
+    Responsive subject table container
+    ============================== */
+  .anna-calc-subject-table-container {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .anna-calc-subject-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Mobile-first responsive approach */
+  @media (max-width: 768px) {
+    .anna-calc-subject-table {
+      min-width: unset;
+      display: block;
+    }
+    .anna-calc-subject-table thead {
+      display: none;
+    }
+    .anna-calc-subject-table tbody,
+    .anna-calc-subject-table tr {
+      display: block;
+      width: 100%;
+    }
+    .anna-calc-subject-table tr {
+      margin-bottom: 1rem;
+      background-color: var(--anna-calc-white) !important;
+      padding: 0.75rem;
+    }
+    .anna-calc-subject-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border: none;
+      border-bottom: 1px solid var(--anna-calc-border) !important;
+      text-align: right;
+    }
+    .anna-calc-subject-table td:before {
+      content: attr(data-label);
+      font-weight: 600;
+      text-align: left;
+      color: var(--anna-calc-accent-deep) !important;
+      flex: 0 0 120px;
+    }
+    .anna-calc-subject-table td:last-child {
+      border-bottom: none;
+      justify-content: flex-end;
+      padding-top: 0.75rem;
+    }
+    .anna-calc-subject-table td:last-child:before {
+      display: none;
+    }
+    .anna-calc-subject-table input[type="number"],
+    .anna-calc-subject-table input[type="text"],
+    .anna-calc-subject-table select {
+      flex: 1;
+      max-width: 200px;
+    }
+  }
+  
+  /*==============================
+    Tablet improvements
+    ============================== */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .anna-calc-subject-table th,
+    .anna-calc-subject-table td {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  .anna-calc-subject-table th,
+  .anna-calc-subject-table td {
+    padding: 0.25rem;
+    text-align: left;
+    vertical-align: middle;
+  }
+  .anna-calc-remove-subject {
+    background-color: var(--anna-calc-danger) !important;
+    color: var(--anna-calc-white) !important;
+    border: none;
+    border-radius: var(--anna-calc-radius);
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    height: 45px !important;
+    width: fit-content !important;
+    transition: transform 0.2s ease;
+    font-size: 1.1rem;
+  }
+  .anna-calc-remove-subject:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* ==============================
+     Result Section - Modern & Responsive
+     ============================== */
+  .anna-calc-result-section {
+    margin-top: var(--anna-calc-spacing);
+    border-top: 1px solid var(--anna-calc-border);
+    padding-top: var(--anna-calc-spacing);
+  }
+  .anna-calc-result-title {
+    margin-bottom: var(--anna-calc-gap);
+    color: var(--anna-calc-accent-deep);
+  }
+  .anna-calc-result-table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .anna-calc-result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--anna-calc-gap);
+  }
+  .anna-calc-result-table th,
+  .anna-calc-result-table td {
+    padding: 0.5rem;
+    border: 1px solid var(--anna-calc-border);
+  }
+  .anna-calc-result-table th {
+    background-color: var(--anna-calc-accent);
+    color: var(--anna-calc-white);
+    text-align: left;
+  }
+  .anna-calc-result-table tr:nth-child(even) td {
+    background-color: var(--anna-calc-accent-light);
+  }
+  .anna-calc-result-table tr:nth-child(odd) td {
+    background-color: var(--anna-calc-white);
+  }
+  
+  /*==============================
+    Action buttons grouping
+    ============================== */
+  .anna-calc-actions {
+    display: flex;
+    gap: var(--anna-calc-gap);
+  }
+  .anna-calc-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--anna-calc-gap);
+    margin-top: var(--anna-calc-spacing);
+  }
+  
+  /*==============================
+    Responsive design
+    ============================== */
+  @media (max-width: 768px) {
+    .anna-calc-container {
+      padding: 1rem;
+    }
+    .anna-calc-regulation-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 400px) {
+    .anna-calc-semester-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  @media (max-width: 380px) {
+    .anna-calc-action-buttons,
+    .anna-calc-actions {
+      flex-direction: column;
+      gap: var(--anna-calc-gap);
+    }
+    .anna-calc-button {
+      width: 100% !important;
+    }
+  }
+  /* ==============================
+    ANNA CGPA Calculator Specific Styles End
+    ============================== */
