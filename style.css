@@ -1,3 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* ==============================
+General Css Start
+============================== */
+:root {
+    --st-accent: #4361ee;
+    --st-accent-deep: #3a56d4;
+    --st-accent-light: #e6f0ff;
+      --st-bg: #f8f9fa;
+    --st-text: #2b2d42;
+    --st-white: #ffffff;
+    --st-border: #e0e3e7;
+    --st-danger: #e74c3c;
+    --st-danger-deep: #bd3324;
+    --st-success: #2ecc71;
+    --st-success-deep: #27ae60;
+    --st-radius: 3px;
+    --st-spacing: 1rem;
+    --st-gap: 0.65rem;
+    --st-width: 900px;
+  }
+  
+  /* ======== General Main Container ======== */
+  .st-general-main-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: var(--st-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--st-spacing);
+      background: var(--st-white);
+      border: 1px solid var(--st-border);
+      border-radius: var(--st-radius);
+      padding: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+  
+  /* ======== General Header ======== */
+  .st-general-header {
+    text-align: center;
+    background-color: var(--st-accent) !important;
+    border: 1px solid var(--st-accent) !important;
+    border-radius: var(--st-radius) !important;
+    padding: 1.8rem 1rem;
+    color: var(--st-white) !important;
+  }
+  
+  .st-general-title {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .st-general-subtitle {
+    font-size: 1rem !important;
+    color: var(--st-white) !important;
+    margin: 0.25rem 0 0 0 !important;
+    line-height: 1.5rem;
+  }
+  
+  /* ======== General input & select ======== */
+  .st-general-input,
+  .st-general-select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 45px !important;
+    padding: 0 12px;
+    border-radius: var(--st-radius);
+    border: 1px solid var(--st-border) !important;
+    color: var(--st-text) !important;
+  }
+  
+  .st-general-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234361ee' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 28px !important;
+      cursor: pointer;
+  }
+  
+  .st-general-input:focus,
+  .st-general-select:focus {
+    outline: none;
+    border-color: var(--st-accent);
+  }
+  
+  /* ===== General Buttons ===== */
+  .st-general-btn {
+    width: fit-content!important;
+    height: 45px !important;
+    padding: 0 15px !important;
+    border-radius: var(--st-radius);
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem !important;
+    cursor: pointer;
+    color: var(--st-white) !important;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .st-general-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .st-main-calculation-btn {
+    background-color: var(--st-accent) !important;
+    width: fit-content;
+    text-wrap: nowrap;
+    padding-inline: 25px;
+  }
+  
+  .st-pdf-btn,
+  .st-print-btn {
+    background-color: var(--st-success) !important;
+  }
+  
+  .st-copy-btn {
+    background-color: var(--st-accent) !important;
+  }
+  
+  .st-main-reset-btn {
+    background-color: var(--st-danger) !important;
+  }
+  
+  /* ===== SahajTools Responsive adjustments ===== */
+  @media (max-width: 600px) {
+    .st-general-title {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 450px) {
+      .st-general-main-container{
+          padding: var(--st-gap);
+      }
+      
+    .st-main-calculation-btn {
+      width: 100%;
+    }
+      
+    .st-general-input,
+    .st-general-select {
+      height: 40px !important;
+    }
+  }
+  /* ==============================
+  General Css End
+  ============================== */
 /* ==============================
   ANNA CGPA Calculator Specific Styles Start
   ============================== */
